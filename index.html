@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .flex-item-first {
+            background-color: #f1f1f1;
+            padding: 10px;
+            flex: 20%;
+            margin:2%
+        }
+
+        .flex-item-second {
+            background-color: dodgerblue;
+            padding: 10px;
+            flex: 20%;
+            margin:2%
+        }
+        .flex-item-third {
+            background-color: black;
+            padding: 10px;
+            flex: 20%;
+            margin:2%
+        }
+        .flex-item-forth {
+            background-color: red;
+            padding: 10px;
+            flex: 20%;
+            margin:2%
+            /* animation: mymove 3s ; */
+
+        }
+        @keyframes mymove {
+            50% {transform: rotate(360deg);}
+        }
+
+
+        .leaf{
+            height: 100px;
+            width: 75px;
+            margin: 10% 25%;
+            border-radius: 0px 50px 0px ;
+            box-shadow: 2px 2px 10px rgba(254, 254, 254, 0.7);
+            background-color: green;
+        }
+        .leaf:hover{
+            animation: mymove 3s ;
+        }
+        /* Responsive layout - makes a one column-layout instead of a two-column layout */
+        @media (max-width: 800px) {
+
+            .flex-item-first,
+            .flex-item-second,
+            .flex-item-third,
+            .flex-item-forth {
+                flex: 100%;
+                align-items: center;
+            }
+
+            .leaf{
+                /* margin-left: 40%; */
+                margin: 10% 10% 10% 40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item-first">
+            <p class="leaf"></p>    
+        </div>
+        <div class="flex-item-second">
+            <p class="leaf" ></p>
+        </div>
+        <div class="flex-item-third">
+            <p class="leaf"></p>
+        </div>
+        <div class="flex-item-forth">
+            <p class="leaf"></p>
+        </div>
+    </div>
+</body>
+
+</html>
